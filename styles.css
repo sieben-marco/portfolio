@@ -52,7 +52,7 @@ body {
   line-height: 1.5;
   color: var(--txt-color);
   background-color: var(--bg-color);
-  padding: 16px;
+  padding: 24px;
 }
 
 /* Cabeçalho */
@@ -88,13 +88,11 @@ header {
     &:hover {
       background-color: var(--bg-color-hover);
       color: var(--txt-color-hover);
-      
     }
   }
 
   &:focus-visible {
     box-shadow: inset 0 0 0 2px #fff;
-    
   }
 
   &:active {
@@ -124,7 +122,6 @@ svg {
   stroke: currentColor;
   stroke-width: 2;
 }
-
 
 @media (max-width: 768px) {
   nav {
@@ -166,13 +163,14 @@ svg {
 
   nav a {
     width: 100%;
-    padding-block: 16px;
+    padding: 16px;
     user-select: none;
   }
 }
 
 ul {
   display: flex;
+  gap: 16px;
   height: 100%;
 }
 
@@ -183,46 +181,42 @@ ul {
   font-size: 20px;
   color: var(--txt-color);
   text-decoration: none;
-  padding-inline: 16px;
   height: 100%;
   transition:
     background-color 0.3s ease,
     color 0.3s ease,
-    box-shadow 0.3s ease;
+    box-shadow 0.3s ease,
+    padding-inline 0.3s ease;
 
   @media (hover: hover) {
     &:hover {
       background-color: var(--bg-color-hover);
       color: var(--txt-color-hover);
+      padding-inline: 16px;
     }
   }
 
   &:focus-visible {
     box-shadow: inset 0 0 0 2px var(--border-color);
+    padding-inline: 16px;
   }
 
   &:active {
     background-color: var(--bg-color-hover);
     color: var(--txt-color-hover);
+    padding-inline: 16px;
   }
 }
 
 .logo {
   font-size: 28px;
   font-weight: 300;
-  padding-inline: 16px;
 }
 
 #contact {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
-  width: var(--main-width);
-  margin-inline: auto;
-  padding: 32px;
-  height: calc(100dvh - 32px);
-  /* border: 2px solid var(--border-color); */
-  margin-top: 16px;
 }
 
 .back-to-top {
@@ -271,7 +265,40 @@ ul {
   }
 }
 
+#about,
+#skills,
+#projects,
+#contact,
 footer {
-  padding: 16px;
+  width: var(--main-width);
+  margin-inline: auto;
+  margin-top: 48px;
+}
+
+.skills-content {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+
+  svg {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+footer {
   text-align: center;
+}
+
+/* TODO: Remover quando adicionar o projetos */
+.projects-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+
+  div {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #fff;
+  }
 }
