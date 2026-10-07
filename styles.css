@@ -34,7 +34,7 @@ ul {
   --txt-color-selection: light-dark(#fff, #000);
   --border-color: light-dark(#000, #fff);
 
-  --main-width: min(1128px, 100%);
+  --main-width: min(960px, 100%);
 }
 
 ::selection {
