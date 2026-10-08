@@ -283,6 +283,8 @@ footer {
   svg {
     width: 75px;
     height: 75px;
+    stroke: none;
+    stroke-width: 0;
   }
 }
 
